@@ -1,3 +1,4 @@
+export {}
 function manufacture(gifts: string[], materials: string) {
   const giftThatCanBeManufacture = []
   for(const gift of gifts) {

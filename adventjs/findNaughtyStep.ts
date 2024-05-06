@@ -1,3 +1,4 @@
+export {}
 function findNaughtyStep(original: string, modified: string) {
   if(original.length > 0) {
     if(original[0] !== modified[0]) return original.length > modified.length ? original[0]: modified[0]
