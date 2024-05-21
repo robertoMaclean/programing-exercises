@@ -2,17 +2,15 @@ function adjustLights(lights: string[]): number {
   const getExpectedLight = (index: number) => (index % 2 === 0 ? '🔴' : '🟢')
 
   let greenStartMismatchCount = 0
-  let redStartMismatchCount = 0
 
   for (let i = 0; i < lights.length; i++) {
     const expectedLight = getExpectedLight(i)
     if (lights[i] !== expectedLight) {
       greenStartMismatchCount++
-    } else {
-      redStartMismatchCount++
     }
   }
 
+  const redStartMismatchCount = lights.length - greenStartMismatchCount
   return Math.min(greenStartMismatchCount, redStartMismatchCount)
 }
 
